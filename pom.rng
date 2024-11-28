@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="project">
+            <attribute name="xsi:schemaLocation"/>
+            <element name="modelVersion">
+                <data type="NMTOKEN"/>
+            </element>
+            <ref name="groupId"/>
+            <ref name="artifactId"/>
+            <ref name="version"/>
+            <element name="properties">
+                <element name="maven.compiler.source">
+                    <data type="integer"/>
+                </element>
+                <element name="maven.compiler.target">
+                    <data type="integer"/>
+                </element>
+                <element name="project.build.sourceEncoding">
+                    <data type="NCName"/>
+                </element>
+            </element>
+            <element name="dependencies">
+                <oneOrMore>
+                    <element name="dependency">
+                        <ref name="groupId"/>
+                        <ref name="artifactId"/>
+                        <ref name="version"/>
+                    </element>
+                </oneOrMore>
+            </element>
+        </element>
+    </start>
+    <define name="groupId">
+        <element name="groupId">
+            <data type="NCName"/>
+        </element>
+    </define>
+    <define name="artifactId">
+        <element name="artifactId">
+            <data type="NCName"/>
+        </element>
+    </define>
+    <define name="version">
+        <element name="version">
+            <data type="NMTOKEN"/>
+        </element>
+    </define>
+</grammar>
