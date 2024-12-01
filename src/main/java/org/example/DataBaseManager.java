@@ -81,13 +81,13 @@ public class DataBaseManager {
 
     private byte[] serializeGameState(AngelDemonGame.GameState gameState) {
         // TODO: Implement the logic to serialize gameState to a byte array
-        // You can use Java's ObjectOutputStream and ByteArrayOutputStream for this
+        // Gonna use Java's ObjectOutputStream and ByteArrayOutputStream for this
         return null;
     }
 
     private AngelDemonGame.GameState deserializeGameState(byte[] gameStateBytes) {
         // TODO: Implement the logic to deserialize a byte array back to a GameState object
-        // You can use Java's ObjectInputStream and ByteArrayInputStream for this
+        // Gonna use Java's ObjectInputStream and ByteArrayInputStream for this
         return null;
     }
 }

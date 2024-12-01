@@ -53,7 +53,7 @@ public class UserAuthentication {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword()); // Convert char[] to String
 
-        // Validate (for this example, we're not hashing the password for simplicity)
+
         User user = users.get(username);
         if (user != null && user.getHashedPassword().equals(password)) {
             // Load the game with the user's saved state
@@ -71,7 +71,7 @@ public class UserAuthentication {
         if (users.containsKey(username)) {
             JOptionPane.showMessageDialog(loginFrame, "Username already exists!");
         } else {
-            // For this example, we're not hashing the password for simplicity.
+
             users.put(username, new User(username, password, new GameState()));
             JOptionPane.showMessageDialog(loginFrame, "Registered successfully!");
         }

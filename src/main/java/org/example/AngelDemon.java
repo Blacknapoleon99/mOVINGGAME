@@ -40,8 +40,8 @@ public class AngelDemon {
         }
     }
     public void updateHealth() {
-        // Update the health of this creature (example logic)
-        stats.decreaseHealth(1); // Decrease health by 1 as an example
+        // Update the health of this creature
+        stats.decreaseHealth(1);
         if (stats.getHealth() <= 0) {
             System.out.println(name + " has been defeated!");
         }
